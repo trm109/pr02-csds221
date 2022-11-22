@@ -141,7 +141,7 @@ export default {
       //close the modal.
     },
     async fetchTask(id) {
-      const response = await fetch(`api/tasks/${id}`);
+      const response = await fetch(`https://pr02-json-server.herokuapp.com/tasks/${id}`);
       const data = await response.json();
       return data;
     },

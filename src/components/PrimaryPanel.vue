@@ -127,17 +127,17 @@ export default defineComponent({
       }
     },
     async fetchTasks() {
-      const response = await fetch("api/tasks");
+      const response = await fetch("https://pr02-json-server.herokuapp.com/tasks");
       const data = await response.json();
       return data;
     },
     async fetchTask(id) {
-      const response = await fetch(`api/tasks/${id}`);
+      const response = await fetch(`https://pr02-json-server.herokuapp.com/tasks/${id}`);
       const data = await response.json();
       return data;
     },
     async addTask(task) {
-      const response = await fetch("api/tasks", {
+      const response = await fetch("https://pr02-json-server.herokuapp.com/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -153,7 +153,7 @@ export default defineComponent({
     async deleteTask(id) {
       console.log("PPanel delclick " + id);
       if (confirm("Are you sure?")) {
-        const res = await fetch(`api/tasks/${id}`, {
+        const res = await fetch(`https://pr02-json-server.herokuapp.com/tasks/${id}`, {
           method: "DELETE",
         });
         res.status === 200
@@ -166,7 +166,7 @@ export default defineComponent({
       
     },
     async modifyTask(task) {
-      const res = await fetch(`api/tasks/${task.id}`, {
+      const res = await fetch(`https://pr02-json-server.herokuapp.com/tasks/${task.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
