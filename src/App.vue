@@ -8,7 +8,6 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
 import PrimaryPanel from "./components/PrimaryPanel.vue";
 import TaskEditor from "./components/TaskEditor.vue";
 
@@ -16,7 +15,6 @@ import TaskEditor from "./components/TaskEditor.vue";
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
     PrimaryPanel,
     TaskEditor,
   },
