@@ -6,7 +6,7 @@ module.exports = {
         target: "http://localhost:5000",
         changeOrigin: true,
         logLevel: "debug",
-        pathRewrite: { "^/api": "/" },
+        pathRewrite: { "^/api": "https://pr02-json-server.herokuapp.com/tasks" },
       },
     },
   },
