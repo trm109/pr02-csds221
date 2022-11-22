@@ -10,5 +10,5 @@ module.exports = {
       },
     },
   },
-  publicPath: process.env.NODE_ENV === "production" ? "/pr02-csds221/" : "/",
+  publicPath: './',
 };
